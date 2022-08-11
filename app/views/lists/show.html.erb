@@ -1,12 +1,22 @@
-<H1>list stuff</H1>
-<%= @list.name %>
+<div class="container">
+  <div class="div1">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+      <div class="container">
+        <%= @list.name %>
+        <%= link_to 'Add a bookmark', new_list_bookmark_path(@list), class: 'btn btn-gradient' %>
 
-<%= link_to "add a bookmark", new_list_bookmark_path(@list) %>
-
-<%@list.bookmarks.each do |bookmark|  %>
-<%= bookmark.comment %>
-<%= bookmark.movie.title %>
-<%= image_tag bookmark.movie.poster_url, alt: "text" %>
-
-<%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Delete?" } %>
-<% end %>
+      </div>
+    </div>
+  </div>
+  <div class="div2">
+    <div class="cards">
+      <%@list.bookmarks.each do |bookmark|  %>
+        <div class="card-category" style="background-image: url(<%= image_tag bookmark.movie.poster_url%>)">
+          <%= bookmark.comment %>
+          <%= bookmark.movie.title %>
+          <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Delete?" } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

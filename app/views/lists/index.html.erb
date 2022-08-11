@@ -1,7 +1,16 @@
-<% @lists.each do |list| %>
-  <ul>
-    <li>
-      <p><%= link_to list.name, list_path(list) %></p>
-    </li>
-  </ul>
-<% end %>
+<div class="container mt-5">
+  <div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <div class="container">
+      <h1>New list!</h1>
+      <p>Name a category</p>
+      <p><%= link_to "new list", new_list_path(@list), class: "btn btn-gradient" %></p>
+    </div>
+  </div>
+  <div class="cards mt-5">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random">
+        <p><%= link_to list.name, list_path(list) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
