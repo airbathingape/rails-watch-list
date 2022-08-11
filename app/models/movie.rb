@@ -3,5 +3,4 @@ class Movie < ApplicationRecord
   has_many :movies
   validates :title, presence: true, uniqueness: true
   validates :overview, presence: true
-
 end
