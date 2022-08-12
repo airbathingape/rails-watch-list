@@ -8,7 +8,7 @@
   </div>
   <div class="cards mt-3">
     <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?<%= list.name %>+movie&<%= rand(1000) %>)">
         <p><%= link_to list.name, list_path(list) %></p>
       </div>
     <% end %>
