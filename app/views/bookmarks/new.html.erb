@@ -1,9 +1,9 @@
-<h1>YOU MADE IT!</h1>
-
-
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-
-  <%= f.submit class: 'btn btn-primary mt-3' %>
-<% end %>
+<div class="container">
+  <div class="card rounded mx-auto mt-5 p-3 shadow">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :movie %>
+      <%= f.submit class: 'btn btn-primary mt-3' %>
+    <% end %>
+  </div>
+</div>
