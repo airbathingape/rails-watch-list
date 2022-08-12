@@ -9,9 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
-        <p><%= link_to "New List", new_list_path(@list), class: "btn btn-gradient" %></p>
-        <p><%= link_to "Home", lists_path(@list), class: "btn btn-gradient" %></p>
-        <p><%= link_to "Delete a list!", lists_path(@list), class: "btn btn-gradient" %></p>
+        <p><%= link_to new_list_path(@list) do%></p>
+          <i class="fa-solid fa-square-plus button_margin"></i>
+        <% end %>
+        <p><%= link_to lists_path(@list) do%></p>
+        <i class="fa-solid fa-trash-can button_margin"></i>
+        <% end %>
+        <p><%= link_to lists_path(@list) do %></p>
+          <i class="fa-solid fa-house button_margin"></i>
+        <% end %>
+
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/airbathingape", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
