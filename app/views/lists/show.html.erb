@@ -19,12 +19,15 @@
               <%= bookmark.movie.title %>
             </h2>
             <p>
+              <%= bookmark.movie.overview %>
+            </p>
+            <p>
               <%= bookmark.comment %>
             </p>
           </div>
           <h2 class="card-trip-pricing">
             <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Delete?" }, class: 'button_delete' do %>
-            <i class="fa-solid fa-trash-can"></i>
+              <i class="fa-solid fa-trash-can"></i>
             <% end %>
           </h2>
         </div>
