@@ -11,7 +11,7 @@
         <p><%= link_to list.name, list_path(list) %></p>
         <br>
         <%= link_to list_path(list), data: { turbo_method: :delete, turbo_confirm: "Delete?" }, class: 'button_delete' do %>
-          <i class="fa-solid fa-trash-can"></i>
+          <i class="fa-solid fa-trash-can trash-position"></i>
         <% end %>
       </div>
     <% end %>

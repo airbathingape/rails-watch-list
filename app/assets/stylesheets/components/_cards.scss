@@ -1,6 +1,7 @@
 .card-category {
   background-size: cover;
   background-position: center;
+  position: relative;
   height: 180px;
   display: flex;
   justify-content: center;
@@ -22,6 +23,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+
+}
+
+.trash-position {
+  position: absolute;
+  top: 100px;
+  right: 100px;
 }
 
 // Smallest device
